@@ -1,19 +1,76 @@
-
-:root{
-    --primary-font: "";
-}
-
-.header-background-image{
+/* header section*/
+.header-container{
     background-image: url(../images/sydney.jpg);
     background-size: cover;
     height: 100vh;
 }
 
-.header-background-image h1{
-    display: inline;
-    font-size: 3em;
+.brand-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
 }
 
-.header-background-image img{
-    margin: 2em 0em 0em 2em;
+.brand-container h1{
+    font-size: 3em;
+    font-weight: 600;
 }
+
+.brand-container img{
+    margin: auto 2em;
+}
+
+.title-container{
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+}
+
+.main-title{
+    font-size: 5em;
+    padding: 1em;
+    font-weight: 100;
+}
+
+/* finish header section*/
+
+/* programs section*/
+
+    .programs-container{
+
+    }
+
+    .programs-info-container{
+    }
+
+    .programs-info-container p{
+        text-align: center;
+        border-top: 1px black solid;
+        font-size: 2em;
+        font-weight: 500;
+        padding: 3em;
+        line-height: 1.2em;
+    }
+
+    .programs-info-container h1{
+        text-align: center;
+        font-weight: 200;
+        font-size: 5em;
+    }
+
+    .programs-list-container li {
+        padding: 1em 0em;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .programs-list-container ul{
+        padding: 4em;
+    }
+    .programs-list-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+/* finish programs section*/
