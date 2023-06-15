@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.1-alpha/dist/css/materialize.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+  <nav>
+
+        <div class="nav-wrapper blue">
+            <a href="#!" class="brand-logo" style="margin-left: 0.5em;">TuXchange</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="fas fa-bars"></i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">Programs</a></li>
+                <li><a href="badges.html">Inscriptions</a></li>
+                <li><a href="collapsible.html">About Us</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+
+    </ul>
+
+  <main class="row" style="
+  background-image: url(https://i.ibb.co/HxMnrF5/Argentina-main.jpg);
+  background-size: cover !important;
+  background-position: center !important;">
+
+    <div class="m6 s12 offset-m3 row">  <!-- la zona en donde se va a colocar la tarjeta donde ira el formulario -->
+      <div class="s12" style="margin: 2em 0em;">  <!-- el espacio que va a ocupar la tarjeta del formulario dentro de esta zona -->
+        <div class="card" style="padding: 2em;">
+
+          <h3>Inscription</h3>
+          <form>
+
+            <!-- form nombre -->
+            <div class="mb-4">
+              <input type="text" id="nombre" class="form-control" placeholder="John Doe" />
+              <label class="form-label" for="nombre">Name</label>
+            </div>
+
+
+            <!-- queda trabajo aca, anda mal fecha de nacimiento / genero anda bien -->
+            <div class="row">
+              <!-- select birthdate -->
+              <div class="m6 s12 mb-4 ">
+                <div class="form-outline datepicker ">
+                  <input type="date" class="datepicker" id="edad" />
+                  <label for="edad" class="form-label">Birthdate</label>
+                </div>
+              </div>
+
+              <!-- select genero -->
+              <select id="form-select-6" class="browser-default m6 s12" style="height: 3.7em;">
+                <option value="" disabled selected>Gender</option>
+                <option value="1">Female</option>
+                <option value="2">Male</option>
+                <option value="3">Other</option>
+              </select>
+            </div>
+
+            <!-- Choose your destination -->
+            <div class="input-field s12">
+              <select id="form-select-2" class="browser-default" style="height: 4em; margin: 1em 0em;"">
+                    <option value="" disabled selected>Choose your destination</option>
+                    <option value=" 1">argentina</option>
+                <option value="2">uruguay</option>
+                <option value="3">germany</option>
+              </select>
+            </div>
+
+            <!-- Email -->
+            <div class="s12">
+              <input type="email" id="email" class="form-control" placeholder="jonnydoe@Email.com" />
+              <label class="form-label" for="email">Email</label>
+            </div>
+
+            <!-- boton trigger del modal -->
+            <button data-target="myModal" class="btn modal-trigger waves-effect waves-green blue">Modal</button>
+
+            <!-- modal -->
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <h4>Submitted!</h4>
+                <p>a tuxchange operator will get in touch with you.</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+ 
+  </main>
+
+  <footer class="page-footer blue">
+    <div class="container">
+      <div class="row">
+        <div class="l6 s12">
+          <h5>Footer Content</h5>
+          <p>You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="l4 offset-l2 s12">
+          <h5>Links</h5>
+          <ul>
+            <li><a href="#!">Link 1</a></li>
+            <li><a href="#!">Link 2</a></li>
+            <li><a href="#!">Link 3</a></li>
+            <li><a href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright blue">
+      <div class="container center-align">
+        © 2014 Copyright Text
+      </div>
+    </div>
+  </footer>
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.1-alpha/dist/js/materialize.min.js"></script>
+
+  <!-- script del modal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+    });
+  </script>
+
+<!-- script de form date-time -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.datepicker');
+      var options = {
+        format: 'yyyy-mm-dd', // Formato de fecha
+        autoClose: true // Cerrar automáticamente el Datepicker después de seleccionar una fecha
+      };
+      var instances = M.Datepicker.init(elems, options);
+    });
+  </script>
+
+  <!-- script navbar -->
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          var elems = document.querySelectorAll('.sidenav');
+          var instances = M.Sidenav.init(elems);
+      });
+  </script>
+</body>
+
+
+</html>
