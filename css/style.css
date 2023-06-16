@@ -1,8 +1,21 @@
+
+/* general styles*/
+
+.title{
+    margin:0.5em auto;
+}
+
+.darken{
+    background-color: #0000004d;
+    background-blend-mode: darken;
+}
+
+
 /* header section*/
 .header-container{
-    background-image: url(../images/sydney.jpg);
+    background-image: url(../images/germany-landscape.jpg);
     background-size: cover;
-    height: 100vh;
+    height: 95vh;
 }
 
 .brand-container{
@@ -13,34 +26,26 @@
 
 .brand-container h1{
     font-size: 3em;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .brand-container img{
     margin: auto 2em;
 }
 
-.title-container{
-    height: 75vh;
+.main-title{
+    height: 50%;
     display: flex;
     justify-content: center;
-}
-
-.main-title{
-    font-size: 5em;
-    padding: 1em;
-    font-weight: 100;
+    margin: 4em;
 }
 
 /* finish header section*/
 
 /* programs section*/
 
-    .programs-container{
-
-    }
-
-    .programs-info-container{
+    .programs-section {
+        padding: 1em;
     }
 
     .programs-info-container p{
@@ -48,8 +53,8 @@
         border-top: 1px black solid;
         font-size: 2em;
         font-weight: 500;
-        padding: 3em;
         line-height: 1.2em;
+        padding: 1em;
     }
 
     .programs-info-container h1{
@@ -67,10 +72,73 @@
     .programs-list-container ul{
         padding: 4em;
     }
-    .programs-list-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+
 
 /* finish programs section*/
+
+/* carousel section*/
+
+.carousel-item{
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.carousel-info{
+    position: absolute;
+    margin: 3em;
+}
+
+#argentina{
+    background-image: url(../images/argentina-landscape.jpg);
+}
+
+#australia{
+    background-image: url(../images/australia-landscape.jpg);
+}
+
+#scotland{
+    background-image: url(../images/scotland-landscape.jpg);
+}
+
+#germany{
+    background-image: url(../images/germany-landscape.jpg);
+}
+
+#denmark{
+    background-image: url(../images/denmark-landscape.jpg);
+}
+
+/* finish carousel section*/
+
+
+/* about us section*/
+
+.about-us {
+    margin:4em 0;
+    padding: 1em;
+}
+
+.about-us .image{
+    background-image: url(../images/estudiantes-vertical.jpg);
+    background-position: center ;
+    background-size: cover;
+    margin: 1em;
+    height: 70vh;
+}
+
+
+/* finish about us section*/
+
+/* mentions section*/
+
+    .mentions {
+        margin:4em 0;
+    }
+
+    .mentions .row{
+        gap:2em;
+    }
+
+/* finish mentions section*/
+
