@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% block title %}
+           {% endblock %}</title>
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet"
@@ -14,119 +15,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/layout_styles.css')}}">
+
+    {% block custom_css %}
+    {% endblock %}
 
 </head>
 
 <body>
-
     <!-- navbar pc -->
-    <nav>
-
-        <div class="nav-wrapper white border-b-grey">
-            <a href="index.html" class="brand-logo black-text ml-sm">TuXchange</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger black-text">
-                <i class="fas fa-bars"></i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li><a class="black-text" href="programs.html">Programs</a></li>
-                <li><a class="black-text" href="inscriptions.html">Inscriptions</a></li>
-                <li><a class="black-text" href="about_us.html">About Us</a></li>
-            </ul>
-        </div>
-
-    </nav>
-
-    <!-- navbar desplegable -->
-    <ul class="sidenav" id="mobile-demo">
-
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="inscriptions.html">Inscriptions</a></li>
-        <li><a href="about_us.html">About Us</a></li>
-
-    </ul>
+    {% block nav %}
+    {% endblock %}
 
     <!-- contenido principal -->
-    <main class="row padding-2">
+    {% block body %}
+    {% endblock %}
 
-        <div class="s12 l5 offset-l1 blue white-text center-align">
-            <h2>choose your program</h2>
-            <p class="flow-text">
-                Welcome to TuXchange! We open doors to endless opportunities for students seeking
-                immersive educational experiences. With our diverse range of destinations, from bustling cities to
-                picturesque landscapes, students can embark on transformative journeys while fostering cultural
-                understanding and personal growth. Join us and discover a world of possibilities, where education and
-                travel go hand in hand
-            </p>
-        </div>
-
-        <div class="s12 l6 center-align">
-
-            <div class="row white-text blue s11 hoverable bg-custom-fix margin-y-2" style="
-                    background-image: url(https://i.ibb.co/HxMnrF5/Argentina-main.jpg);">
-                <h4 class="s12 flow-text left-align">Electric-mechanic</h4>
-                <p class="s12 l6 left-align">Study electromechanics with an agronomy and livestock focus</p>
-                <div class="l3 s6">
-                    <a href="" class="btn">Argentina</a>
-                </div>
-                <div class="l3 s6">
-                    <a href="inscriptions.html" class="btn">inscription</a>
-                </div>
-            </div>
-
-            <div class="row white-text blue s11 hoverable bg-custom-fix margin-y-2" style="
-                    background-image: url(https://i.ibb.co/HxMnrF5/Argentina-main.jpg);">
-                <h4 class="s12 flow-text left-align">Electric-mechanic</h4>
-                <p class="s12 l6 left-align">Study electromechanics with an agronomy and livestock focus</p>
-                <div class="l3 s6">
-                    <a href="" class="btn">Argentina</a>
-                </div>
-                <div class="l3 s6">
-                    <a href="inscriptions.html" class="btn">inscription</a>
-                </div>
-            </div>
-
-            <div class="row white-text blue s11 hoverable bg-custom-fix margin-y-2" style="
-                    background-image: url(https://i.ibb.co/HxMnrF5/Argentina-main.jpg);">
-                <h4 class="s12 flow-text left-align">Electric-mechanic</h4>
-                <p class="s12 l6 left-align">Study electromechanics with an agronomy and livestock focus</p>
-                <div class="l3 s6">
-                    <a href="" class="btn">Argentina</a>
-                </div>
-                <div class="l3 s6">
-                    <a href="inscriptions.html" class="btn">inscription</a>
-                </div>
-            </div>
-
-            <div class="row white-text blue s11 hoverable bg-custom-fix margin-y-2" style="
-                    background-image: url(https://i.ibb.co/HxMnrF5/Argentina-main.jpg);">
-                <h4 class="s12 flow-text left-align">Electric-mechanic</h4>
-                <p class="s12 l6 left-align">Study electromechanics with an agronomy and livestock focus</p>
-                <div class="l3 s6">
-                    <a href="" class="btn">Argentina</a>
-                </div>
-                <div class="l3 s6">
-                    <a href="inscriptions.html" class="btn">inscription</a>
-                </div>
-            </div>
-
-            <div class="row white-text blue s11 hoverable bg-custom-fix margin-y-2" style="
-                    background-image: url(https://i.ibb.co/HxMnrF5/Argentina-main.jpg);">
-                <h4 class="s12 flow-text left-align">Electric-mechanic</h4>
-                <p class="s12 l6 left-align">Study electromechanics with an agronomy and livestock focus</p>
-                <div class="l3 s6">
-                    <a href="" class="btn">Argentina</a>
-                </div>
-                <div class="l3 s6">
-                    <a href="inscriptions.html" class="btn">inscription</a>
-                </div>
-            </div>
-
-        </div>
-
-    </main>
-
-    <!-- footer hediondo -->
+    <!-- footer -->
     <footer class="row border-t-grey margin-top">
         <div class="center-align m4 s12">
             <h5>CONTACT US</h5>
@@ -204,16 +109,10 @@
     </footer>
 
     <!-- Compiled and minified JavaScript -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.1-alpha/dist/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.1-alpha/dist/js/materialize.min.js"></script>
 
-    <!-- script navbar -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems);
-        });
-    </script>
+    {% block custom_scripts %}
+    {% endblock %}
 
 </body>
 

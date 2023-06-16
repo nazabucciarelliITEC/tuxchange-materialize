@@ -10,20 +10,8 @@ ul {
   border-top: 1px solid rgb(137, 137, 137)!important;
 }
 
-
 .ml-sm{
   margin-left: 0.5em!important;
-}
-
-#bg-arg{
-  background-image: url(https://i.ibb.co/HxMnrF5/Argentina-main.jpg);
-}
-
-.bg-custom-fix{
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  position: relative !important;
 }
 
 .margin-y-2{

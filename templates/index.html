@@ -1,0 +1,173 @@
+{% extends 'layout_footer.html' %}
+
+{% block title %}tuxchange{% endblock %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{{url_for('static', filename='CSS/index_style.css')}}">
+{% endblock %}
+
+{% block body %}
+<main>
+    <section class="header-container darken">
+        <div class="brand-container">
+            <img src="{{url_for('static', filename='images/Tux_Mono.png')}}" alt="Tux image monochromatic">
+            <h1 class="white-text">TuXchange</h1>
+        </div>
+
+        <div class="main-title valign-wrapper">
+            <h1 class="white-text">Making unforgettable memories while studying</h1>
+        </div>
+
+    </section>
+
+    <section class="programs-section row valign-wrapper">
+        <div class="col l6 s12 programs-info-container">
+            <h1>Check out our programs</h1>
+            <p>Check out our various exchange programs designed to suit your academic needs and cultural preferences.
+            </p>
+        </div>
+        <div class="col l6 s12 programs-list-container ">
+            <ul class="blue accent-3 white-text">
+                <li>Program for software development students</li>
+                <li>Program for tourism and hostelry students</li>
+                <li>Program for electrical engineering students</li>
+                <li>Program for medicine students</li>
+                <a href="programs.html" class="btn waves-effect waves-light right white black-text">Read more</a>
+            </ul>
+        </div>
+    </section>
+
+    <h1 class="container center-align title">Most popular destinations</h1>
+
+    <div class="carousel carousel-slider">
+
+        <a class="carousel-item darken" id="argentina">
+            <div class="carousel-info">
+                <h1 class="white-text">Argentina</h1>
+                <p class="white-text">Come visit the best country of South America.</p>
+                <button class="btn waves-effect waves-light blue">Read more</button>
+            </div>
+
+        </a>
+        <a class="carousel-item darken" id="australia">
+            <div class="carousel-info">
+                <h1 class="white-text">Australia</h1>
+                <p class="white-text">Come visit Australia, a land like no other.</p>
+                <button class="btn waves-effect waves-light blue">Read more</button>
+            </div>
+        </a>
+        <a class="carousel-item darken" id="germany">
+            <div class="carousel-info">
+                <h1 class="white-text">Germany</h1>
+                <p class="white-text">Come visit Germany, the “Land of Poets and Thinkers.”</p>
+                <button class="btn waves-effect waves-light blue">Read more</button>
+            </div>
+        </a>
+        <a class="carousel-item darken" id="scotland">
+            <div class="carousel-info">
+                <h1 class="white-text">Scotland</h1>
+                <p class="white-text">Come visit Scotland, a part of the island of Great Britain.</p>
+                <button class="btn waves-effect waves-light blue">Read more</button>
+            </div>
+        </a>
+        <a class="carousel-item darken" id="denmark">
+            <div class="carousel-info">
+                <h1 class="white-text">Denmark</h1>
+                <p class="white-text">Come visit Denmark, the happiest country on the planet.</p>
+                <button class="btn waves-effect waves-light blue">Read more</button>
+            </div>
+        </a>
+        
+    </div>
+
+    <section class="about-us row blue accent-3 white-text">
+        <div class="col l6 s12 image">
+        </div>
+        <div class="col l6 s12 valign-wrapper container">
+            <div> <!-- necessary div to align both h1 and p correctly-->
+                <h1>About us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat aliquam cum, dolorem itaque
+                    sequi ad illo ratione officiis alias, corporis voluptatibus recusandae nisi iure, quia dolor quidem.
+                    Assumenda fugit labore animi omnis earum. Deserunt laudantium non quae veniam eveniet accusamus
+                    explicabo minus numquam vitae dolorem placeat fuga, necessitatibus provident neque amet incidunt.
+                    Quo assumenda libero numquam vero, voluptate adipisci! Rem natus repellendus nobis vitae omnis
+                    perspiciatis cum, blanditiis tenetur aliquam sapiente pariatur recusandae aut illum quo nesciunt
+                    eveniet aperiam tempora sunt iure quis exercitationem assumenda vel.</p>
+                <button class="btn waves-effect waves-light right white black-text right">Read more</button>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="mentions">
+        <h1 class="container center-align title">Mentions</h1>
+        <div class="row container">
+
+            <div class="card col l4 s12">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='images/estudiante1.png')}}">
+                    <div class="activator waves-effect waves-light"
+                        style="position:absolute;top:0;bottom:0;right:0;left:0;"></div>
+                </div>
+                <div class="card-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
+                        class="bi bi-quote m-5" viewBox="0 0 16 16">
+                        <path
+                            d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z" />
+                    </svg> <span class="card-title activator">John Titor</span>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sed alias reprehenderit nisi
+                        cum ab mollitia facilis iusto modi odit!</p>
+                </div>
+            </div>
+
+            <div class="card col l4 s12">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='images/estudiante2.png')}}">
+                    <div class="activator waves-effect waves-light"
+                        style="position:absolute;top:0;bottom:0;right:0;left:0;"></div>
+                </div>
+                <div class="card-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
+                        class="bi bi-quote m-5" viewBox="0 0 16 16">
+                        <path
+                            d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z" />
+                    </svg> <span class="card-title activator">Walter Stephen</span>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sed alias reprehenderit nisi
+                        cum ab mollitia facilis iusto modi odit!</p>
+                </div>
+            </div>
+
+            <div class="card col l4 s12">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='images/estudiante3.png')}}">
+                    <div class="activator waves-effect waves-light"
+                        style="position:absolute;top:0;bottom:0;right:0;left:0;"></div>
+                </div>
+                <div class="card-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
+                        class="bi bi-quote m-5" viewBox="0 0 16 16">
+                        <path
+                            d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z" />
+                    </svg> <span class="card-title activator">Emily Smith</span>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sed alias reprehenderit nisi
+                        cum ab mollitia facilis iusto modi odit!</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block custom_scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems);
+    });
+</script>
+{% endblock %}
