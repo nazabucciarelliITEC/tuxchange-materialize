@@ -1,0 +1,40 @@
+h2 {
+    margin: 5px 0 0 0;
+}
+
+h4 {
+    margin: 5px 0 0 0;
+}
+
+#header {
+    background-image: url(../images/header_aboutus.PNG);
+    display: flexbox;
+    align-items: center;
+    padding: 0.5rem 2rem 2rem 2rem;
+    margin-bottom: 1rem;
+}
+
+#container {
+    padding: 0 1rem;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+#about {
+    padding: 0 1rem;
+    margin: 0 1rem 0.5rem 0;
+
+}
+
+#separator {
+    border-right: solid 1px black;
+    margin: 0;
+    padding: 0;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    border-left: solid 1px black;
+    padding-left: 1rem;
+}
