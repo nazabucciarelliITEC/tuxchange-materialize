@@ -1,0 +1,109 @@
+{% extends 'layout_footer_nav.html' %}
+{% block title %}tuxchange - incription{% endblock %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{{url_for('static', filename='CSS/programs_style.css')}}">
+{% endblock %}
+
+
+{% block body %}
+
+  <!-- contenido principal -->
+  <main class="row bg-custom-fix" id="bg-arg">
+
+    <div class="m6 s12 offset-m3 row"> <!-- la zona en donde se va a colocar la tarjeta donde ira el formulario -->
+      <div class="s12 margin-y-2">
+        <!-- el espacio que va a ocupar la tarjeta del formulario dentro de esta zona -->
+        <div class="card padding-2">
+
+          <h3>Inscription</h3>
+          <form>
+
+            <!-- form nombre -->
+            <div class="mb-4">
+              <input type="text" id="nombre" class="form-control" placeholder="John Doe" />
+              <label class="form-label" for="nombre">Name</label>
+            </div>
+
+
+            <!-- queda trabajo aca, anda mal fecha de nacimiento / genero anda bien -->
+            <div class="row">
+              <!-- select birthdate -->
+              <div class="m6 s12 mb-4 ">
+                <div class="form-outline datepicker ">
+                  <input type="date" class="datepicker" id="edad" />
+                  <label for="edad" class="form-label">Birthdate</label>
+                </div>
+              </div>
+
+              <!-- select genero -->
+              <select id="form-select-6" class="browser-default m6 s12" style="height: 3.7em;">
+                <option value="" disabled selected>Gender</option>
+                <option value="1">Female</option>
+                <option value="2">Male</option>
+                <option value="3">Other</option>
+              </select>
+            </div>
+
+            <!-- Choose your destination -->
+            <div class="input-field s12">
+              <select id="form-select-2" class="browser-default" style="height: 4em; margin: 1em 0em;"">
+                <option value="" disabled selected>Choose your destination</option>
+                {% for country in countries %}
+                  <option>{{ country.program_name }} in {{country.name}}</option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <!-- Email -->
+            <div class="s12">
+              <input type="email" id="email" class="form-control" placeholder="jonnydoe@Email.com" />
+              <label class="form-label" for="email">Email</label>
+            </div>
+
+            <!-- boton trigger del modal -->
+            <button data-target="myModal" class="btn modal-trigger waves-effect waves-green blue">Modal</button>
+
+            <!-- modal -->
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <h4>Submitted!</h4>
+                <p>a tuxchange operator will get in touch with you.</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+{% endblock %}
+
+
+{% block custom_scripts %}
+  <!-- script del modal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+    });
+  </script>
+
+  <!-- script de form date-time -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.datepicker');
+      var options = {
+        format: 'yyyy-mm-dd', // Formato de fecha
+        autoClose: true // Cerrar automáticamente el Datepicker después de seleccionar una fecha
+      };
+      var instances = M.Datepicker.init(elems, options);
+    });
+  </script>
+{% endblock %}
