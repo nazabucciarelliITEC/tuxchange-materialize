@@ -1,0 +1,18 @@
+.margin-y-2 {
+    margin: 2em 1em;
+}
+
+#bg-arg {
+    background-image: url(https://i.ibb.co/HxMnrF5/Argentina-main.jpg);
+}
+
+.bg-custom-fix {
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    position: relative !important;
+}
+
+.padding-2{
+    padding: 2em;
+  }
