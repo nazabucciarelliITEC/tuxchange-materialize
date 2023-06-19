@@ -1,0 +1,56 @@
+{% extends 'layout_footer_nav.html' %}
+
+{% block title%} {{country_name}} - TuXchange {% endblock %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{{url_for('static', filename='CSS/country_style.css')}}">
+{% endblock %}
+
+{%block body%} 
+<main>
+    <!-- country info -->
+    <section class=" row country-info" style="gap: 5px;">
+            <div class="col l7 s12 valign-wrapper margin-x"><img src="{{country_img}}" alt="{{country_name}}"></div>
+            <div class="col l5 s12">
+                <h1 class="center-align hide-on-med-and-down">{{country_name}}</h1>
+                <h3 class="center-align show-on-medium-and-down hide-on-med-and-up">{{country_name}}</h3>
+                <p class="justified">{{country_description}}</p>
+                <div class="row">
+                    <a class="col l4 s12 waves-effect waves-light btn green darken-1 margin-x pulse" href="/inscriptions">Apply Now</a>
+                    <p class="col l4 s12 center-align">or</p>
+                    <a class="col l4 s12 waves-effect waves-light btn  blue darken-1 margin-x truncate" href="/programs">See Programs</a>
+                </div>
+            </div>
+    </section>
+    <!-- end country info -->
+    <!-- carousel section -->
+    <section>
+        <h1 class="center-align">Other Popular Countrys</h1>
+        <hr class="divisor margin-x">
+
+        <div class="carousel carousel-slider center white-text" >
+            {%for i in range(list_length)%}
+            <div  class="carousel-item darken" style="background-image: url('{{other_country_list[i].landscape_img}}');">
+                <div class="carousel-info left-align">
+                    <h1>{{other_country_list[i].name}}</h1>
+                    <p>{{other_country_list[i].brief_description}}</p>
+                    <a href="/country/{{other_country_list[i].id-1}}" class="btn waves-effect waves-light blue">Read more</a>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </section>
+    <!-- end carousel -->
+</main>
+{%endblock%}
+
+{% block custom_scripts %}
+<!-- Carousel script -->
+<script>    
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems,{fullWidth: true,indicators: true});
+    });
+</script>
+<!-- end carousel script -->
+{% endblock %}

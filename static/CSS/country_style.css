@@ -1,0 +1,46 @@
+/* Styles for Country.html */
+
+/* country info section */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.country-info{
+    margin:4em;
+    padding: 1em;
+    gap: 5px;
+}
+
+.margin-x{
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.justified{
+    text-align: justify;
+}
+/* end country info */
+
+/* carousel section */
+.divisor{
+    border: solid 1px;
+}
+
+.carousel-item{
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.carousel-info{
+    position: absolute;
+    margin: 3em;
+}
+
+.darken{
+    background-color: #0000004d;
+    background-blend-mode: darken;
+}
+/* end carousel */
+/* Finish country.html */
