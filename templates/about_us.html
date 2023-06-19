@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'layout_footer_nav.html' %}
+{% block title %}tuxchange - incription{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - TuXchange</title>
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.1-alpha/dist/css/materialize.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about_us_style.css">
-</head>
-<body>
+{% block custom_css %}
+<link rel="stylesheet" href="{{url_for('static', filename='CSS/about_us_style.css')}}">
+{% endblock %}
+
+
+{% block body %}
 
     <div class="col s12 white-text" id="header">
 
@@ -20,7 +16,7 @@
 
     </div>
     <div class="row" id="container">
-        <div class="blue white-text flow-text col s4" id="about">
+        <div class="blue white-text flow-text col s12 m4" id="about">
             <h2> ABOUT US </h2>
             <h4> At TuXchange, we believe that the world is better when people try to understand one another. 
                 Since 2020, TuXchange has helped millions of people see new places, experience new cultures, 
@@ -28,7 +24,7 @@
     
         </div>
 
-        <div class="col s8" id="list">
+        <div class="col s12 m8" id="list">
             <h2> Academic study </h2>
             <h4>Lorem Ipsum</h4>
             <p> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
@@ -49,9 +45,4 @@
 
     </div>
 
-
-
-    <script
-    src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.1-alpha/dist/js/materialize.min.js"></script>
-</body>
-</html>
+{% endblock %}
