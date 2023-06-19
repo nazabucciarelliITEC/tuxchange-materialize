@@ -1,9 +1,9 @@
 h2 {
-    margin: 5px 0 0 0;
+    margin: 5px 0 0 0!important;
 }
 
 h4 {
-    margin: 5px 0 0 0;
+    margin: 5px 0 0 0!important;
 }
 
 #header {
@@ -21,8 +21,8 @@ h4 {
 }
 
 #about {
-    padding: 0 1rem;
-    margin: 0 1rem 0.5rem 0;
+    padding: 0 1rem 1rem 1rem;
+    margin: 0 1rem 1rem 0;
 
 }
 
