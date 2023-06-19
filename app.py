@@ -15,6 +15,10 @@ for country in json_data:
     urls_landscape_img.append(country['landscape_img'])
     urls_main_img.append(country['main_img'])                  # se recorre cada elemento del json y se guardan las url's en listas paralelas
 
+@app.route('/about-us')
+def about_us():
+    return render_template('about_us.html')
+
 @app.errorhandler(404)
 def not_found(error):
     return render_template('404.html')
