@@ -19,7 +19,6 @@ for country in json_data:
 def about_us():
     return render_template('about_us.html')
 
-
 @app.route('/country/<id>')
 def country(id):
     file_name = "countries.json" # Nombre del archivo JSON
@@ -63,7 +62,6 @@ def programs():
 @app.route('/inscriptions')  
 def inscriptions(): 
     return render_template('inscriptions.html', countries=json_data, imagenes=urls_main_img) #le paso como parametro la data del json
-
  
 if __name__ == '__main__':
     app.run()
