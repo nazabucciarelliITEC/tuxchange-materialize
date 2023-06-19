@@ -1,0 +1,42 @@
+{% block custom_css %}
+<link rel="stylesheet" href="{{url_for('static', filename='CSS/layout_styles.css')}}">
+{% endblock %}
+
+{% block nav %}
+<!-- navbar pc -->
+<nav>
+    <div class="nav-wrapper white border-b-grey">
+        <a href="/" class="brand-logo black-text ml-sm">TuXchange</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger black-text">
+            <i class="fas fa-bars"></i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a class="black-text" href="/programs">Programs</a></li>
+            <li><a class="black-text" href="/inscriptions">Inscriptions</a></li>
+            <li><a class="black-text" href="/about_us">About Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- navbar desplegable -->
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="/programs">Programs</a></li>
+    <li><a href="/inscriptions">Inscriptions</a></li>
+    <li><a href="/about_us">About Us</a></li>
+</ul>
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+{% include "layout_footer.html" %}
+
+{% block custom_scripts %}
+    <!-- script navbar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
+{% endblock %}

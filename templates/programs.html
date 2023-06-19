@@ -1,0 +1,41 @@
+{% extends 'layout_footer_nav.html' %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{{url_for('static', filename='CSS/programs_style.css')}}">
+{% endblock %}
+
+{% block title %}tuxchange - programs{% endblock %}
+
+{% block body %}
+<main class="row padding-2">
+
+    <div class="s12 l5 offset-l1 blue white-text center-align">
+        <h2>choose your program</h2>
+        <p class="flow-text">
+            Welcome to TuXchange! We open doors to endless opportunities for students seeking
+            immersive educational experiences. With our diverse range of destinations, from bustling cities to
+            picturesque landscapes, students can embark on transformative journeys while fostering cultural
+            understanding and personal growth. Join us and discover a world of possibilities, where education and
+            travel go hand in hand
+        </p>
+    </div>
+
+    <div class="s12 l6 center-align">
+        {%for country in countries%}
+            <div class="row white-text blue s11 hoverable bg-custom-fix margin-y-2" 
+                style="background-image: url('{{imagenes[country.id-1]}}');">
+                <h4 class="s12 flow-text left-align">{{ country.program_name }}</h4>
+                <p class="s12 l6 left-align">{{ country.program_description }}</p>
+                <div class="l3 s6">
+                    <a href="" class="btn">{{country.name}}</a>
+                </div>
+                <div class="l3 s6">
+                    <a href="inscriptions" class="btn">inscription</a>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+</main>
+{% endblock %}
