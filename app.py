@@ -22,15 +22,15 @@ def not_found(error):
 @app.route('/')
 def index():
     return render_template('index.html', countries=json_data, imagenes=urls_landscape_img) #le paso como parametro la data del json
-
-@app.route('/programs')
-def programs():
+ 
+@app.route('/programs') 
+def programs(): 
     return render_template('programs.html', countries=json_data, imagenes=urls_main_img) #le paso como parametro la data del json
-
-@app.route('/inscriptions')
-def inscriptions():
+ 
+@app.route('/inscriptions')  
+def inscriptions(): 
     return render_template('inscriptions.html', countries=json_data, imagenes=urls_main_img) #le paso como parametro la data del json
 
-
+ 
 if __name__ == '__main__':
     app.run()
