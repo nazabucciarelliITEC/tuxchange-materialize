@@ -1,0 +1,48 @@
+{% extends 'layout_footer_nav.html' %}
+{% block title %}tuxchange - incription{% endblock %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{{url_for('static', filename='CSS/about_us_style.css')}}">
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="col s12 white-text" id="header">
+
+        <h3> WE ARE TUXCHANGE </h3>
+        <br>
+        <h4>committed to education since Unix time 1597679799</h4>
+
+    </div>
+    <div class="row" id="container">
+        <div class="blue white-text flow-text col s12 m4" id="about">
+            <h2> ABOUT US </h2>
+            <h4> At TuXchange, we believe that the world is better when people try to understand one another. 
+                Since 2020, TuXchange has helped millions of people see new places, experience new cultures, 
+                and learn new things about the world and about themselves.</h4>
+    
+        </div>
+
+        <div class="col s12 m8" id="list">
+            <h2> Academic study </h2>
+            <h4>Lorem Ipsum</h4>
+            <p> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
+    
+            <h2> Educational travel </h2>
+            <h4>Lorem Ipsum</h4>
+            <p> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
+    
+            <h2> Learn a language </h2>
+            <h4>Lorem Ipsum</h4>
+            <p> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
+    
+            <h2> Cultural exchange </h2>
+            <h4>Lorem Ipsum</h4>
+            <p> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
+    
+        </div>
+
+    </div>
+
+{% endblock %}
