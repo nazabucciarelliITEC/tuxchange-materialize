@@ -16,3 +16,12 @@
 .padding-2{
     padding: 2em;
   }
+
+.padding-0-5{
+    padding: 0.5em;
+}
+
+.darken{
+    background-color: #00000081;
+    background-blend-mode: darken;
+}

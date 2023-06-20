@@ -32,51 +32,23 @@
                 <li>Program for tourism and hostelry students</li>
                 <li>Program for electrical engineering students</li>
                 <li>Program for medicine students</li>
-                <a href="programs.html" class="btn waves-effect waves-light right white black-text">Read more</a>
+                <a href="/programs" class="btn waves-effect waves-light right white black-text">Read more</a>
             </ul>
         </div>
     </section>
 
     <h1 class="container center-align title">Most popular destinations</h1>
 
-    <div class="carousel carousel-slider">
-
-        <a class="carousel-item darken" id="argentina">
-            <div class="carousel-info">
-                <h1 class="white-text">Argentina</h1>
-                <p class="white-text">Come visit the best country of South America.</p>
-                <button class="btn waves-effect waves-light blue">Read more</button>
+    <div class="carousel carousel-slider white-text">
+        {%for country in countries%}
+        <div  class="carousel-item darken" style="background-image: url('{{country.landscape_img}}');">
+            <div class="carousel-info left-align">
+                <h1>{{country.name}}</h1>
+                <p>{{country.brief_description}}</p>
+                <a href="/country/{{country.id-1}}" class="btn waves-effect waves-light blue">Read more</a>
             </div>
-
-        </a>
-        <a class="carousel-item darken" id="australia">
-            <div class="carousel-info">
-                <h1 class="white-text">Australia</h1>
-                <p class="white-text">Come visit Australia, a land like no other.</p>
-                <button class="btn waves-effect waves-light blue">Read more</button>
-            </div>
-        </a>
-        <a class="carousel-item darken" id="germany">
-            <div class="carousel-info">
-                <h1 class="white-text">Germany</h1>
-                <p class="white-text">Come visit Germany, the “Land of Poets and Thinkers.”</p>
-                <button class="btn waves-effect waves-light blue">Read more</button>
-            </div>
-        </a>
-        <a class="carousel-item darken" id="scotland">
-            <div class="carousel-info">
-                <h1 class="white-text">Scotland</h1>
-                <p class="white-text">Come visit Scotland, a part of the island of Great Britain.</p>
-                <button class="btn waves-effect waves-light blue">Read more</button>
-            </div>
-        </a>
-        <a class="carousel-item darken" id="denmark">
-            <div class="carousel-info">
-                <h1 class="white-text">Denmark</h1>
-                <p class="white-text">Come visit Denmark, the happiest country on the planet.</p>
-                <button class="btn waves-effect waves-light blue">Read more</button>
-            </div>
-        </a>
+        </div>
+        {%endfor%}
         
     </div>
 
@@ -86,14 +58,10 @@
         <div class="col l6 s12 valign-wrapper container">
             <div> <!-- necessary div to align both h1 and p correctly-->
                 <h1>About us</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat aliquam cum, dolorem itaque
-                    sequi ad illo ratione officiis alias, corporis voluptatibus recusandae nisi iure, quia dolor quidem.
-                    Assumenda fugit labore animi omnis earum. Deserunt laudantium non quae veniam eveniet accusamus
-                    explicabo minus numquam vitae dolorem placeat fuga, necessitatibus provident neque amet incidunt.
-                    Quo assumenda libero numquam vero, voluptate adipisci! Rem natus repellendus nobis vitae omnis
-                    perspiciatis cum, blanditiis tenetur aliquam sapiente pariatur recusandae aut illum quo nesciunt
-                    eveniet aperiam tempora sunt iure quis exercitationem assumenda vel.</p>
-                <button class="btn waves-effect waves-light right white black-text right">Read more</button>
+                <p>At TuXchange, we believe that the world is better when people try to understand one another.
+                    Since 2020, TuXchange has helped millions of people see new places, experience new cultures,
+                    and learn new things about the world and about themselves.</p>
+                <a href="/about-us" class="btn waves-effect waves-light right white black-text right">Read more</a>
 
             </div>
         </div>
@@ -167,7 +135,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('.carousel');
-        var instances = M.Carousel.init(elems);
+        var instances = M.Carousel.init(elems,{fullWidth: true,indicators: true});
     });
 </script>
 {% endblock %}

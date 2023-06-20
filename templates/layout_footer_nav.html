@@ -13,7 +13,7 @@
         <ul class="right hide-on-med-and-down">
             <li><a class="black-text" href="/programs">Programs</a></li>
             <li><a class="black-text" href="/inscriptions">Inscriptions</a></li>
-            <li><a class="black-text" href="/about_us">About Us</a></li>
+            <li><a class="black-text" href="/about-us">About Us</a></li>
         </ul>
     </div>
 </nav>
@@ -32,11 +32,11 @@
 {% include "layout_footer.html" %}
 
 {% block custom_scripts %}
-    <!-- script navbar -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems);
-        });
-    </script>
+<!-- script navbar -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+    });
+</script>
 {% endblock %}
