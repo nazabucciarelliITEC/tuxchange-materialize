@@ -17,7 +17,7 @@ for country in json_data:
 
 @app.route('/about-us')
 def about_us():
-    return render_template('about_us.html')
+    return render_template('about_us.html') 
 
 @app.route('/country/<id>')
 def country(id):
