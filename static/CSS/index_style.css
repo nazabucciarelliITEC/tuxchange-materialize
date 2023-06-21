@@ -93,5 +93,9 @@ ul {
         gap:2em;
     }
 
+    .card{
+        width: 100%;
+    }
+
 /* finish mentions section*/
 

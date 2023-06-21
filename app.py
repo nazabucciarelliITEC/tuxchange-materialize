@@ -25,7 +25,7 @@ def country(id):
     with open(file_name, "r", encoding="utf8") as json_file:     
         json_data = json.load(json_file)   
     try:           
-        id=int(id)         
+        id=int(id)          
     except:  
         return render_template('404.html') 
     else:
