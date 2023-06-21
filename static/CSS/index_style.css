@@ -18,12 +18,15 @@ ul {
     margin:4em auto;
 }
 
+.p-2{
+    padding: 2em;
+}
 /* header section*/
 
 .header-container{
     background-image: url(../images/germany-landscape.jpg);
     background-size: cover;
-    height: 95vh;
+    height: 90vh;
 }
 
 .brand-container{
@@ -54,7 +57,6 @@ ul {
     .programs-list-container ul{
         padding: 4em;
     }
-
 
 /* finish programs section*/
 

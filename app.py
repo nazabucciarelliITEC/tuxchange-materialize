@@ -20,13 +20,13 @@ def about_us():
     return render_template('about_us.html')  
    
 @app.route('/country/<id>')  
-def country(id):    
+def country(id):     
     file_name = "countries.json" # Nombre del archivo JSON
-    with open(file_name, "r", encoding="utf8") as json_file:    
+    with open(file_name, "r", encoding="utf8") as json_file:     
         json_data = json.load(json_file)   
-    try:         
-        id=int(id)        
-    except: 
+    try:           
+        id=int(id)         
+    except:  
         return render_template('404.html') 
     else:
         country_name=country['name']
