@@ -15,17 +15,23 @@ for country in json_data:
     urls_landscape_img.append(country['landscape_img'])
     urls_main_img.append(country['main_img'])                  # se recorre cada elemento del json y se guardan las url's en listas paralelas
  
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('404.html')
+
+@app.route('/')
+def index():
+    return render_template('index.html', countries=json_data, imagenes=urls_landscape_img) #le paso como parametro la data del json
+    
 @app.route('/about-us') 
 def about_us():
     return render_template('about_us.html')  
    
 @app.route('/country/<id>')  
 def country(id):     
-    file_name = "countries.json" # Nombre del archivo JSON
-    with open(file_name, "r", encoding="utf8") as json_file:     
-        json_data = json.load(json_file)   
     try:           
-        id=int(id)          
+        id=int(id)
+        country=json_data[id]         
     except:  
         return render_template('404.html') 
     else:
@@ -44,15 +50,6 @@ def country(id):
                             other_country_list=other_country_list,
                             list_length=len(other_country_list),
                             )
-
-
-@app.errorhandler(404)
-def not_found(error):
-    return render_template('404.html')
-
-@app.route('/')
-def index():
-    return render_template('index.html', countries=json_data, imagenes=urls_landscape_img) #le paso como parametro la data del json
  
 @app.route('/programs') 
 def programs(): 

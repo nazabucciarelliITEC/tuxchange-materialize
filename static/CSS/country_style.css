@@ -23,10 +23,6 @@ img{
 /* end country info */
 
 /* carousel section */
-.divisor{
-    border: solid 1px;
-}
-
 .carousel-item{
     background-position: center !important;
     background-size: cover !important;
