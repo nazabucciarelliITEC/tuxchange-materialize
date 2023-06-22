@@ -14,21 +14,20 @@ urls_landscape_img = [] #lista donde se guardaran las URL de las imagenes landsc
 for country in json_data:                                 
     urls_landscape_img.append(country['landscape_img'])
     urls_main_img.append(country['main_img'])                  # se recorre cada elemento del json y se guardan las url's en listas paralelas
-
-@app.route('/about-us')
+ 
+@app.route('/about-us') 
 def about_us():
-    return render_template('about_us.html')
-
-@app.route('/country/<id>')
-def country(id):
+    return render_template('about_us.html')  
+   
+@app.route('/country/<id>')  
+def country(id):     
     file_name = "countries.json" # Nombre del archivo JSON
-    with open(file_name, "r", encoding="utf8") as json_file: 
-        json_data = json.load(json_file)
-    try:
-        id=int(id)
-        country=json_data[id]
-    except:
-        return render_template('404.html')
+    with open(file_name, "r", encoding="utf8") as json_file:     
+        json_data = json.load(json_file)   
+    try:           
+        id=int(id)          
+    except:  
+        return render_template('404.html') 
     else:
         country_name=country['name']
         country_desc=country['description']

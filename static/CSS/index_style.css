@@ -1,10 +1,6 @@
 
 /* general styles*/
 
-.title{
-    margin:0.5em auto;
-}
-
 .darken{
     background-color: #0000004d;
     background-blend-mode: darken;
@@ -14,59 +10,29 @@ ul {
     list-style-type: none;
 }
 
-.border-b-grey{
-  border-bottom: 1px solid rgb(137, 137, 137)!important;
+.m-y-05{
+    margin: 0.5em auto;
 }
 
-.border-t-grey{
-  border-top: 1px solid rgb(137, 137, 137)!important;
+.m-y-4{
+    margin:4em auto;
 }
 
-
-.ml-sm{
-  margin-left: 0.5em!important;
+.p-2{
+    padding: 2em;
 }
-
-#bg-arg{
-  background-image: url(https://i.ibb.co/HxMnrF5/Argentina-main.jpg);
-}
-
-.bg-custom-fix{
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  position: relative !important;
-}
-
-.margin-y-2{
-  margin: 2em 1em;
-}
-
-.padding-2{
-  padding: 2em;
-}
-
-.margin-top{
-  margin-top: 1em;
-}
-
-
 /* header section*/
+
 .header-container{
     background-image: url(../images/germany-landscape.jpg);
     background-size: cover;
-    height: 95vh;
+    height: 90vh;
 }
 
 .brand-container{
     display: flex;
     flex-direction: row;
     justify-content: start;
-}
-
-.brand-container h1{
-    font-size: 3em;
-    font-weight: 400;
 }
 
 .brand-container img{
@@ -84,35 +50,13 @@ ul {
 
 /* programs section*/
 
-    .programs-section {
-        padding: 1em;
-    }
-
-    .programs-info-container p{
-        text-align: center;
-        border-top: 1px black solid;
-        font-size: 2em;
-        font-weight: 500;
-        line-height: 1.2em;
-        padding: 1em;
-    }
-
-    .programs-info-container h1{
-        text-align: center;
-        font-weight: 200;
-        font-size: 5em;
-    }
-
     .programs-list-container li {
         padding: 1em 0em;
-        font-size: 1.5em;
-        font-weight: 600;
     }
 
     .programs-list-container ul{
         padding: 4em;
     }
-
 
 /* finish programs section*/
 
@@ -131,13 +75,7 @@ ul {
 
 /* finish carousel section*/
 
-
 /* about us section*/
-
-.about-us {
-    margin:4em 0;
-    padding: 1em;
-}
 
 .about-us .image{
     background-image: url(../images/estudiantes-vertical.jpg);
@@ -147,17 +85,16 @@ ul {
     height: 70vh;
 }
 
-
 /* finish about us section*/
 
 /* mentions section*/
 
-    .mentions {
-        margin:4em 0;
-    }
-
     .mentions .row{
         gap:2em;
+    }
+
+    .card{
+        width: 100%;
     }
 
 /* finish mentions section*/

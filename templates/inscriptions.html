@@ -26,13 +26,13 @@
             </div>
 
 
-            <!-- queda trabajo aca, anda mal fecha de nacimiento / genero anda bien -->
+            <!-- fecha de nacimiento / genero -->
             <div class="row">
               <!-- select birthdate -->
               <div class="m6 s12 mb-4 ">
                 <div class="form-outline datepicker ">
-                  <input type="date" class="datepicker" id="edad" />
-                  <label for="edad" class="form-label">Birthdate</label>
+                  <input type="text" class="datepicker" id="fechaNaci" />
+                  <label for="fechaNaci" class="form-label">Birthdate</label>
                 </div>
               </div>
 
@@ -98,12 +98,10 @@
   <!-- script de form date-time -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.datepicker');
-      var options = {
-        format: 'yyyy-mm-dd', // Formato de fecha
-        autoClose: true // Cerrar automáticamente el Datepicker después de seleccionar una fecha
-      };
-      var instances = M.Datepicker.init(elems, options);
-    });
+      var dates = document.querySelectorAll('#fechaNaci');
+      M.Datepicker.init(dates,{
+        format: 'dd/mm/yyyy'
+      })
+    })
   </script>
 {% endblock %}
