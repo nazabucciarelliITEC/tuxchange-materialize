@@ -9,32 +9,32 @@
 {% block body %}
 <main class="row padding-2">
 
-    <div class="s12 l5 offset-l1 blue white-text center-align">
-        <h2>choose your program</h2>
-        <p class="flow-text">
-            Welcome to TuXchange! We open doors to endless opportunities for students seeking
-            immersive educational experiences. With our diverse range of destinations, from bustling cities to
-            picturesque landscapes, students can embark on transformative journeys while fostering cultural
-            understanding and personal growth. Join us and discover a world of possibilities, where education and
-            travel go hand in hand
-        </p>
+    <div class="s12 l6 blue accent-3 white-text valign-wrapper">
+        <div class="mx-custom">
+            <h2 class="center-align">Choose your program!</h2>
+            <p class="flow-text justified">
+                Welcome to TuXchange! We open doors to endless opportunities for students seeking
+                immersive educational experiences. With our diverse range of destinations, from bustling cities to
+                picturesque landscapes, students can embark on transformative journeys while fostering cultural
+                understanding and personal growth. Join us and discover a world of possibilities, where education and
+                travel go hand in hand.</p>
+        </div>
     </div>
 
     <div class="s12 l6 center-align">
         {%for country in countries%}
             <div class="row white-text s11 hoverable bg-custom-fix margin-y-2 darken padding-0-5" 
                 style="background-image: url('{{imagenes[country.id-1]}}');">
-                <h4 class="s12 flow-text left-align">{{ country.program_name }}</h4>
+                <h4 class="s12 margin-0 flow-text left-align">{{ country.program_name }}</h4>
                 <p class="s12 l6 left-align">{{ country.program_description }}</p>
                 <div class="l3 s6">
-                    <a href="" class="btn">{{country.name}}</a>
+                    <a href="/country/{{country.id-1}}" class="btn blue">{{country.name}}</a>
                 </div>
                 <div class="l3 s6">
-                    <a href="inscriptions" class="btn">Inscription</a>
+                    <a href="inscriptions" class="btn green">Apply</a>
                 </div>
             </div>
         {% endfor %}
-
     </div>
 
 </main>

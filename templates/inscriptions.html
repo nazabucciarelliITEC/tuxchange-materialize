@@ -10,7 +10,6 @@
 
   <!-- contenido principal -->
   <main class="row bg-custom-fix" id="bg-arg">
-
     <div class="m6 s12 offset-m3 row"> <!-- la zona en donde se va a colocar la tarjeta donde ira el formulario -->
       <div class="s12 margin-y-2">
         <!-- el espacio que va a ocupar la tarjeta del formulario dentro de esta zona -->
@@ -18,13 +17,11 @@
 
           <h3>Inscription</h3>
           <form>
-
             <!-- form nombre -->
             <div class="mb-4">
               <input type="text" id="nombre" class="form-control" placeholder="John Doe" />
               <label class="form-label" for="nombre">Name</label>
             </div>
-
 
             <!-- fecha de nacimiento / genero -->
             <div class="row">
@@ -60,15 +57,15 @@
               <input type="email" id="email" class="form-control" placeholder="jonnydoe@Email.com" />
               <label class="form-label" for="email">Email</label>
             </div>
-
+            <br>
             <!-- boton trigger del modal -->
-            <button data-target="myModal" class="btn modal-trigger waves-effect waves-green blue">Modal</button>
+            <button data-target="myModal" class="btn modal-trigger waves-effect waves-green blue">Sumbit</button>
 
             <!-- modal -->
             <div id="myModal" class="modal">
               <div class="modal-content">
                 <h4>Submitted!</h4>
-                <p>a tuxchange operator will get in touch with you.</p>
+                <p>Thank you for trusting in us! A tuxchange operator will get in touch with you.</p>
               </div>
               <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
@@ -80,7 +77,6 @@
         </div>
       </div>
     </div>
-
   </main>
 
 {% endblock %}
